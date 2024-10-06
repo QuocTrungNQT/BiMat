@@ -1164,7 +1164,7 @@ span{
     text-shadow: 0 0 8px red;
 }
 .boxMail .boxMail-container .card2:hover h3{
-    animation: texth3 3s forwards;
+    animation: texth3 2s forwards;
     animation-delay: 2s;
     transition: 1s;
 }
