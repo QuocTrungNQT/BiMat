@@ -143,7 +143,7 @@
         })
     </script>
 
-<script>
+<!-- <script>
     // Lấy thẻ audio
     var audio = document.getElementById('myAudio');
   
@@ -152,5 +152,39 @@
       audio.currentTime = 8;  // Bắt đầu từ giây thứ 8
       audio.play();  // Phát âm thanh
     };
+  </script> -->
+
+  <script>
+    var audio = document.getElementById('myAudio');
+  
+    // Kiểm tra nếu có thời gian phát trước đó được lưu trữ trong localStorage
+    var savedTime = localStorage.getItem('audioCurrentTime');
+  
+    // Khi tệp âm thanh đã sẵn sàng (metadata loaded)
+    audio.onloadedmetadata = function() {
+      // Nếu có thời gian đã lưu, đặt thời gian phát về giá trị đó
+      if (savedTime) {
+        audio.currentTime = 9.5;
+      }
+      // Kiểm tra điều kiện autoplay và phát nhạc nếu cần
+      if (savedTime || !savedTime) {
+        audio.play().catch(function(error) {
+          console.log('Autoplay bị chặn, yêu cầu tương tác từ người dùng.');
+        });
+      }
+    };
+  
+    // Lưu thời gian phát hiện tại trước khi trang được rời hoặc refresh
+    window.addEventListener('beforeunload', function() {
+      localStorage.setItem('audioCurrentTime', audio.currentTime);
+    });
+  
+    // Thêm sự kiện click để bắt đầu phát nhạc nếu autoplay bị chặn
+    document.addEventListener('click', function() {
+      if (audio.paused) {
+        audio.play();
+      }
+    });
   </script>
+  
 </html>

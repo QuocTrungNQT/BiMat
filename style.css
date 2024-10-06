@@ -868,7 +868,7 @@ span{
     opacity: 0;
     visibility: hidden;
     animation: envelope 1s forwards;
-    animation-delay: 11.5s;
+    animation-delay: 8s;
     z-index: 100000000;
 }
 .container .mail .fa-envelope{
