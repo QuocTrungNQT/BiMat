@@ -85,10 +85,13 @@
                 <div class="card2">
                     <div class="card2-content">
                         <h3>Gửi tới Trúc</h3>
-                        <h2>Chúc sinh nhật Dũng thật vui vẽ nha,ăn mong chóng lớn nghe chưa...</h2>
-                        <h2>Tuy chúc hơi muộn.</h2>
-                        <h2>Kí tên</h2>
-                        <h2>NQT</h2> 
+                        <h2>Tháng 10 đến rồi, tháng của chút se lạnh đầu mùa, tháng của những tia nắng mỏng manh cuối cùng
+                            của mùa thu còn sót lại... Tớ gọi nó bằng cái tên "Tháng của Cậu"
+                        </h2>
+                        <h2>Chúc cô gái Thiên Bình gặp nhiều may mắn nhá!!!</h2>
+                        <h2>Happy Birthday.</h2>
+                        <!-- <h2>Kí tên</h2>
+                        <h2>NQT</h2>  -->
                         <div class="imageCute2">
                             <img src="cute2.png" alt="">
                          </div>
@@ -96,6 +99,10 @@
                 </div>
             </div>
         </div>
+
+        <audio id="myAudio" style="display: none;">
+            <source src="HPBD.mp3" type="audio/mpeg">
+          </audio>          
     </div>
 </body>
     <script>
@@ -135,4 +142,15 @@
             boxmail.classList.remove('active')
         })
     </script>
+
+<script>
+    // Lấy thẻ audio
+    var audio = document.getElementById('myAudio');
+  
+    // Khi âm thanh đã sẵn sàng (loaded), đặt thời gian bắt đầu
+    audio.onloadedmetadata = function() {
+      audio.currentTime = 8;  // Bắt đầu từ giây thứ 8
+      audio.play();  // Phát âm thanh
+    };
+  </script>
 </html>
