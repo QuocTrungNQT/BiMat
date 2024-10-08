@@ -1164,7 +1164,7 @@ span{
     text-shadow: 0 0 8px red;
 }
 .boxMail .boxMail-container .card2:hover h3{
-    animation: texth3 2s forwards;
+    animation: texth3 3s forwards;
     animation-delay: 2s;
     transition: 1s;
 }
@@ -1276,3 +1276,126 @@ span::before{
     }
 }
 /* ------hết hiệu ứng di chuyển chuột----- */
+
+
+.container .grid {
+	pointer-events: none; 
+	position: absolute;
+	width: 110%;
+	height: 180%;
+	top: -40%;
+	left: -5%;
+	display: grid;
+	grid-template-columns: repeat(50,2%);
+	grid-template-rows: repeat(50,2%);
+    opacity: 0.7;
+}
+
+.grid__item {
+	position: relative;
+	opacity: 0.4,
+}
+
+.grid--img .grid__item {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	will-change: transform;
+}
+
+.grid__item-img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: 50% 50%;
+	z-index: 100;
+}
+
+.grid--img .grid__item-img {
+	flex: none;
+	width: calc(100% + 100px);
+	height: calc(100% + 100px);
+	will-change: transform;
+}
+
+
+.grid__item {
+	position: relative;
+	opacity: 0.4,
+}
+
+.grid--img .grid__item {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	will-change: transform;
+}
+
+.grid__item-img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: 50% 50%;
+	z-index: 100;
+}
+
+.grid--img .grid__item-img {
+	flex: none;
+	width: calc(100% + 100px);
+	height: calc(100% + 100px);
+	will-change: transform;
+}
+
+/* Shorthand grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+
+.pos-1 {
+	grid-area: 2 / 8 / 14 / 4;
+}
+
+.pos-2 {
+	grid-area: 3/ 16 / 11 / 20;
+}
+
+.pos-3 {
+	grid-area: 4 / 38 / 16 / 43 ;
+}
+
+.pos-4 {
+	grid-area: 17 / 5 / 31 / 10;
+}
+
+.pos-5 {
+	grid-area: 30 / 37 / 46 / 42;
+}
+
+.pos-6 {
+	grid-area: 16 / 44 / 28 / 50;
+}
+
+.pos-7 {
+	grid-area: 33 / 8 / 48 / 14;
+}
+
+.pos-8 {
+	grid-area: 34 / 44 / 50 / 49;
+}
+
+.pos-9 {
+	grid-area: 42 / 30 / 50 / 34;
+}
+
+.pos-10 {
+ 	grid-area: 41 / 22 / 56 / 28 ;
+}
+
+.pos-11{
+	grid-area: 2 / 30 / 10 / 34;
+}
+
+.pos-12{
+	grid-area: 3 / 42 / 17 / 47;
+}
