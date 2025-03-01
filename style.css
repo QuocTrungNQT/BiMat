@@ -1389,7 +1389,8 @@ span::before{
 }
 
 .pos-10 {
- 	grid-area: 41 / 22 / 56 / 28 ;
+ 	/* grid-area: 41 / 22 / 56 / 28 ; */
+     grid-area: 5 / 25 / 11 / 28; 
 }
 
 .pos-11{
